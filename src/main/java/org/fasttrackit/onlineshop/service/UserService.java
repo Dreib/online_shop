@@ -52,4 +52,6 @@ public class UserService {
                 //lambda expression
                 .orElseThrow(() -> new ResourceNotFoundException("User " + id + " does not exist."));
     }
+
+
 }
