@@ -4,7 +4,7 @@ import org.fasttrackit.onlineshop.domain.Cart;
 import org.fasttrackit.onlineshop.domain.User;
 import org.fasttrackit.onlineshop.exception.ResourceNotFoundException;
 import org.fasttrackit.onlineshop.persistence.CartRepository;
-import org.fasttrackit.onlineshop.transfer.AddProductToCartRequest;
+import org.fasttrackit.onlineshop.transfer.cart.AddProductToCartRequest;
 import org.fasttrackit.onlineshop.transfer.cart.CartResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

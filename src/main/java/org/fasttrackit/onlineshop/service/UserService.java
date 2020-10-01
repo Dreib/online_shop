@@ -3,8 +3,8 @@ package org.fasttrackit.onlineshop.service;
 import org.fasttrackit.onlineshop.domain.User;
 import org.fasttrackit.onlineshop.exception.ResourceNotFoundException;
 import org.fasttrackit.onlineshop.persistence.UserRepository;
-import org.fasttrackit.onlineshop.transfer.GetUsersRequest;
-import org.fasttrackit.onlineshop.transfer.SaveUserRequest;
+import org.fasttrackit.onlineshop.transfer.user.GetUsersRequest;
+import org.fasttrackit.onlineshop.transfer.user.SaveUserRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 //spring bean (object controlled by Spring Boot)
 //IoC container (context of all spring beans)
