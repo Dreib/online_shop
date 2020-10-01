@@ -16,8 +16,8 @@ public class Cart {
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinTable(name = "cart_product",
-        joinColumns = @JoinColumn("cart_id"),
-        inverseJoinColumns = @JoinColumn("product_id"))
+        joinColumns = @JoinColumn(name = "cart_id"),
+        inverseJoinColumns = @JoinColumn(name = "product_id"))
     private Set<Product> products = new HashSet<>();
 
     public void addProduct(Product product) {

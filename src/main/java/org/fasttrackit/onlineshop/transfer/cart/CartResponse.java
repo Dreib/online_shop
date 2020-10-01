@@ -1,6 +1,5 @@
 package org.fasttrackit.onlineshop.transfer.cart;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class CartResponse {
