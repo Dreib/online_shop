@@ -1,14 +1,19 @@
 package org.fasttrackit.onlineshop.web;
 
+import org.fasttrackit.onlineshop.domain.Product;
 import org.fasttrackit.onlineshop.service.ProductService;
+import org.fasttrackit.onlineshop.transfer.product.ProductResponse;
+import org.fasttrackit.onlineshop.transfer.product.SaveProductRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @CrossOrigin
 @RestController
-@RequestMapping
+@RequestMapping("/products")
 public class ProductController {
 
     private final ProductService productService;
@@ -17,4 +22,17 @@ public class ProductController {
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+
+    @PostMapping
+    public ResponseEntity<ProductResponse> createProduct(@RequestBody @Valid SaveProductRequest request) {
+        ProductResponse product = productService.createProduct(request);
+        return new ResponseEntity<>(product, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProduct(@PathVariable long id) {
+        Product product = productService.getProduct(id);
+        return new ResponseEntity<>(product, HttpStatus.OK);
+    }
+
 }

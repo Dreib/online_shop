@@ -43,6 +43,8 @@ public class ProductService {
                 .orElseThrow(() -> new ResourceNotFoundException("Product " + id + " does not exist"));
     }
 
+
+
     private ProductResponse mapProductResponse(Product product) {
         ProductResponse productResponse = new ProductResponse();
 
