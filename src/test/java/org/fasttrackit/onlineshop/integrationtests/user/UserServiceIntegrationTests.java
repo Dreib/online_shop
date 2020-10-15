@@ -1,9 +1,9 @@
-package org.fasttrackit.onlineshop.user;
+package org.fasttrackit.onlineshop.integrationtests.user;
 
 import org.fasttrackit.onlineshop.domain.User;
 import org.fasttrackit.onlineshop.exception.ResourceNotFoundException;
+import org.fasttrackit.onlineshop.integrationtests.steps.UserTestSteps;
 import org.fasttrackit.onlineshop.service.UserService;
-import org.fasttrackit.onlineshop.steps.UserTestSteps;
 import org.fasttrackit.onlineshop.transfer.user.SaveUserRequest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
